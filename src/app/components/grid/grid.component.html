@@ -1,0 +1,7 @@
+<div class="grid-container">
+  <app-square
+    *ngFor="let post of posts; let i = index"
+    [post]="post"
+    [style.animationDelay]="getAnimationDelay(i)">
+  </app-square>
+</div>
