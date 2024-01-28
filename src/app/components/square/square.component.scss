@@ -1,13 +1,9 @@
 @import '../../../styles.lib';
 
 .square {
-  font-family: $font-family;
-  padding: $padding-default;
-  height: 7rem;
-  max-width: 100%;
-  min-width: 7rem;
-  text-align: center;
-  color: white;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
   box-sizing: border-box;
   overflow: scroll;
   cursor: pointer;
@@ -15,6 +11,21 @@
 
   &:hover {
     transform: scale(0.98);
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: inherit;
+    overflow: scroll;
+    text-align: center;
+    font-family: $font-family;
+    padding: $padding-default;
   }
 }
 
@@ -24,6 +35,8 @@
 }
 
 .title {
+  align-items: flex-start;
+  color: $light-color;
   background-color: $first-color;
   font-size: $font-size-x-small;
   font-weight: bold;
@@ -40,10 +53,13 @@
 }
 
 .id {
+  color: $light-color;
   background-color: $third-color;
 }
 
 .body {
+  align-items: flex-start;
+  color: $light-color;
   background-color: $fourth-color;
   font-size: $font-size-x-small;
 }
