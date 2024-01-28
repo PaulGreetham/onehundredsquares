@@ -10,7 +10,7 @@
   transition: background-color $standard-transition, transform $standard-transition;
 
   &:hover {
-    transform: scale(0.98);
+    transform: scale(1.05);
   }
 
   .content {
