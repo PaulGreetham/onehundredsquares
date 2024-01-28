@@ -9,11 +9,8 @@ import { Post } from '../models/post.model';
 })
 export class DataService {
   private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-  private postsSubject = new BehaviorSubject<Post[] | null>(null);
-  public readonly posts$ = this.postsSubject.asObservable().pipe(
-    filter(posts => posts !== null),
-    startWith([])
-  );
+  private postsSubject = new BehaviorSubject<Post[]>([]);
+  posts$ = this.postsSubject.asObservable();
 
   constructor(private http: HttpClient) {
     this.loadPosts();

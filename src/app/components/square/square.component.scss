@@ -1,0 +1,41 @@
+/* squares/squares.component.scss */
+.square {
+  padding: 1rem;
+  height: 7rem;
+  border: 1px solid black;
+  text-align: center;
+  overflow: scroll;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: transparent;
+    transform: scale(1.05);
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+}
+
+.user-id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+
+.id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkorange;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  background-color: purple;
+}
