@@ -15,9 +15,9 @@ export class SquareComponent {
 
   private displayMap = [
     () => this.post?.title,
-    () => `${this.post?.userId}`,
-    () => `${this.post?.id}`,
-    () => `${this.post?.body}`
+    () => `USER: ${this.post?.userId}`,
+    () => `POST: ${this.post?.id}`,
+    () => `Description: ${this.post?.body}`
   ];
 
   private classMap = ['title', 'user-id', 'id', 'body'];

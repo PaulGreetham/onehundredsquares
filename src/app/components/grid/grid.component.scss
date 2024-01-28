@@ -1,6 +1,8 @@
-/* grid/grid.component.scss */
+@import '../../../styles.lib';
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  gap: $padding-default;
+  padding: $padding-default;
 }

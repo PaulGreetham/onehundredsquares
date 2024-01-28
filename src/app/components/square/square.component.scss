@@ -1,15 +1,18 @@
-/* squares/squares.component.scss */
+@import '../../../styles.lib';
+
 .square {
-  padding: 1rem;
+  font-family: $font-family;
+  padding: $padding-default;
   height: 7rem;
-  border: 1px solid black;
   text-align: center;
+
+  color: white;
+
   overflow: scroll;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color $standard-transition, transform $standard-transition;
 
   &:hover {
-    background-color: transparent;
     transform: scale(1.05);
   }
 }
@@ -17,25 +20,34 @@
 .title {
   display: flex;
   justify-content: center;
-  background-color: blue;
+  background-color: $first-color;
+
+  font-size: $font-size-small;
 }
 
 .user-id {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
+  color: $dark-color;
+  background-color: $second-color;
+
+  font-size: $font-size-large;
 }
 
 .id {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkorange;
+  background-color: $third-color;
+
+  font-size: $font-size-large;
 }
 
 .body {
   display: flex;
   justify-content: center;
-  background-color: purple;
+  background-color: $fourth-color;
+
+  font-size: $font-size-x-small;
 }
