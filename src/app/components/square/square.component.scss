@@ -4,7 +4,8 @@
   font-family: $font-family;
   padding: $padding-default;
   height: 7rem;
-  width: 7rem;
+  max-width: 100%;
+  min-width: 7rem;
   text-align: center;
   color: white;
   box-sizing: border-box;
@@ -30,7 +31,7 @@
 
 .user-id, .id {
   align-items: center;
-  font-size: $font-size-large;
+  font-size: $font-size-medium;
 }
 
 .user-id {
