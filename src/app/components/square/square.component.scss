@@ -4,14 +4,16 @@
   font-family: $font-family;
   padding: $padding-default;
   height: 7rem;
+  width: 7rem;
   text-align: center;
   color: white;
+  box-sizing: border-box;
   overflow: scroll;
   cursor: pointer;
   transition: background-color $standard-transition, transform $standard-transition;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(0.98);
   }
 }
 
@@ -21,9 +23,8 @@
 }
 
 .title {
-  align-items: center;
   background-color: $first-color;
-  font-size: $font-size-small;
+  font-size: $font-size-x-small;
   font-weight: bold;
 }
 

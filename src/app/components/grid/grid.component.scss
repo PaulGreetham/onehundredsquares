@@ -2,7 +2,9 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(10, 1fr);
   gap: $padding-default;
   padding: $padding-default;
+  padding-right: 0;
+  padding-bottom: 0;
 }
