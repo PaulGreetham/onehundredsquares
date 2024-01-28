@@ -5,9 +5,7 @@
   padding: $padding-default;
   height: 7rem;
   text-align: center;
-
   color: white;
-
   overflow: scroll;
   cursor: pointer;
   transition: background-color $standard-transition, transform $standard-transition;
@@ -17,37 +15,33 @@
   }
 }
 
-.title {
+.title, .user-id, .id, .body {
   display: flex;
   justify-content: center;
-  background-color: $first-color;
+}
 
+.title {
+  align-items: center;
+  background-color: $first-color;
   font-size: $font-size-small;
+  font-weight: bold;
+}
+
+.user-id, .id {
+  align-items: center;
+  font-size: $font-size-large;
 }
 
 .user-id {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: $dark-color;
   background-color: $second-color;
-
-  font-size: $font-size-large;
 }
 
 .id {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: $third-color;
-
-  font-size: $font-size-large;
 }
 
 .body {
-  display: flex;
-  justify-content: center;
   background-color: $fourth-color;
-
   font-size: $font-size-x-small;
 }
