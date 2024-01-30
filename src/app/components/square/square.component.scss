@@ -63,3 +63,44 @@
   background-color: $fourth-color;
   font-size: $font-size-x-small;
 }
+
+
+@media (min-width: 480px) {
+  .title, .body {
+    font-size: $font-size-medium;
+  }
+
+  .user-id, .id {
+    font-size: $font-size-large;
+  }
+}
+
+@media (min-width: 640px) {
+  .title, .body {
+    font-size: $font-size-medium;
+  }
+
+  .user-id, .id {
+    font-size: $font-size-large;
+  }
+}
+
+@media (min-width: 860px) {
+  .title, .body {
+    font-size: $font-size-small;
+  }
+
+  .user-id, .id {
+    font-size: $font-size-large;
+  }
+}
+
+@media (min-width: 1100px) {
+  .title, .body {
+    font-size: $font-size-x-small;
+  }
+
+  .user-id, .id {
+    font-size: $font-size-medium;
+  }
+}
