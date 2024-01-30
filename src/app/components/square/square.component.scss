@@ -64,8 +64,17 @@
   font-size: $font-size-x-small;
 }
 
+@media (max-width: 459px) {
+  .title, .body {
+    font-size: $font-size-medium;
+  }
 
-@media only screen and (max-width: 460px) {
+  .user-id, .id {
+    font-size: $font-size-large;
+  }
+}
+
+@media (min-width: 460px) {
   .title, .body {
     font-size: $font-size-medium;
   }
