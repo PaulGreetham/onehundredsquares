@@ -11,7 +11,7 @@ describe('SquareComponent', () => {
       imports: [SquareComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(SquareComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
