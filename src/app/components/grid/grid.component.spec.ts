@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GridComponent } from './grid.component';
 import { Post } from '../../models/post.model';
 import { By } from '@angular/platform-browser';
@@ -9,11 +8,6 @@ describe('GridComponent', () => {
   let fixture: ComponentFixture<GridComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [GridComponent]
-    })
-    .compileComponents();
-
     fixture = TestBed.createComponent(GridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -38,9 +32,37 @@ describe('GridComponent', () => {
     expect(squareElements.length).toEqual(100);
   });
 
-  it('should compute the correct animation delay based on index', () => {
-    const index = 5;
-    const expectedDelay = '0.125s';
-    expect(component.getAnimationDelay(index)).toEqual(expectedDelay);
+  it('should populate squares with posts', () => {
+    const mockPosts: Post[] = Array.from({ length: 100 }, (_, i) => ({
+      userId: i + 1,
+      id: i + 1,
+      title: `Title ${i + 1}`,
+      body: `Body content for post ${i + 1}`,
+    }));
+
+    component.posts = mockPosts;
+    fixture.detectChanges();
+
+    const squareElements = fixture.debugElement.queryAll(By.css('app-square'));
+    const firstSquareContent = squareElements[0].nativeElement.textContent;
+    expect(firstSquareContent).toContain(mockPosts[0].title);
+  });
+
+  it('should show correct animation delay for each square', () => {
+    const mockPosts: Post[] = Array.from({ length: 100 }, (_, i) => ({
+      userId: i + 1,
+      id: i + 1,
+      title: `Title ${i + 1}`,
+      body: `Body content for post ${i + 1}`,
+    }));
+
+    component.posts = mockPosts;
+    fixture.detectChanges();
+
+    const indexToTest = 1, 7, 68;
+    const expectedDelay = `${0.025 * indexToTest}s`;
+    const squareElement = fixture.debugElement.queryAll(By.css('app-square'))[indexToTest];
+    const style = squareElement.nativeElement.style;
+    expect(style.animationDelay).toEqual(expectedDelay);
   });
 });
