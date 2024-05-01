@@ -2,7 +2,7 @@
 
 One Hundred Squares is a responsive Angular application that fetches and displays 100 posts from the jsonplaceholder API in a 10x10 grid of interactive squares. Designed with a focus on simplicity and adherence to Angular best practices, the application ensures a clean user experience and a maintainable codebase.
 
-View app here: https://onehundredsquares.netlify.app/
+View app here (right click to open in new window): https://onehundredsquares.netlify.app/
 
 
 ## Features
